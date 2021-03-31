@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    font: normal 18pt "Montserrat", sans-serif;
+    background: linear-gradient(180deg, #9F9F9F 6.25%, rgba(223, 223, 223, 0) 100%);
+}
+
+header{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    margin: 1.5em 0 0 2em;
+}
+
+header h1{
+    display: inline;
+    margin: 0 30px 0 0;
+}
+
+header img{
+    width: 2.4em;
+}
+
+main{
+    width: 70%;
+    margin: 0 auto;
+}
+
+#add{
+    width:50%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#add-area{
+    width: 80%;
+}
+
+#add-area-input{
+    font: normal 1.8em 'Montserrat', sans-serif;
+    font-weight: 500;
+    background: none;
+    border:none;
+    width: 100%;
+    outline: none;
+    padding: 0 0 0 10px;
+}
+
+#add-area-aniborder{
+    height: 3px;
+    background: #000;
+    margin: 0 auto;
+}
+
+#add-area-input:focus + #add-area-aniborder {
+    animation: openDiv ease-in-out 1s;
+}
+
+@keyframes openDiv{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+#add-button{
+    background: none;
+    outline: none;
+    border:none;
+}
+
+img#add-button-img{
+    cursor: pointer;
+    width: 50px;
+}
+
+.task{
+    width: 60%;
+    margin: 15px auto;
+    padding: 10px;
+    border: 3px solid red;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(53, 53, 53, 0.5);
+    background: rgba(0, 0, 0, 0);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.task-descript p{
+    font: normal 1.25em 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.task-commands{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.task-commands-button{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 7.5px;
+    outline:none;
+    border:none;
+    box-shadow: 5px 5px 5px rgba(53, 53, 53, 0.5);
+}
+
+.task-commands-button:hover{
+    animation: buttonEffect 0.5s;
+}
+
+@keyframes buttonEffect{
+    0%{
+       transform: translate3d(0, 0, 0);
+       box-shadow:5px 5px 5px rgba(53, 53, 53, 0.5);
+    }
+    100%{
+        transform: translate3d(3px, 3px, 0);
+        box-shadow: none;
+    }
+}
+
+.check-item{
+    background: #27E350;
+}
+
+.edit-item{
+    background: #FFEA2F;
+}
+
+.remove-item{
+    background: #F04444 ;
+}
